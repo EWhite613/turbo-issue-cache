@@ -1,5 +1,5 @@
 import type {
-  V2_MetaFunction as V2MetaFunction,
+  MetaFunction as V2MetaFunction,
   LinksFunction,
 } from "@remix-run/node";
 import {
