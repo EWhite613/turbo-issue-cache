@@ -3,11 +3,13 @@
 First `pnpm install`
 
 # Issue
-`turbo` does not take into account outputted files when using cache. So if i have an outputted file and I also don't have the output in my `.gitignore` it will cause it to miss the cache.
+`turbo` does not take into account outputted files when using cache on dependency builds. So if i have an outputted file and I also don't have the output in my `.gitignore` it will cause it to miss the cache.
+
+Seems like canary fixed an issue where the output was not considered for the current command (ie doing `turbo run build` use to gets this in non canary) But when I run a command that depends on output of another file (ie `turbo run typecheck`) it will see the outputted file of `build` as changed.
 
 So can see first run cache things. And on second run you would expect everything to be cached, but due to the outputted files also being seen as inputs it will re execute (and have it's dependents re-execute). Third run all cached (assuming you don't delete outputted files)
 
-[Can see these run summaries here](https://github.com/EWhite613/turbo-issue-cache/tree/main/runs).
+[Can see these run summaries here. Look at the canary ones.](https://github.com/EWhite613/turbo-issue-cache/tree/main/runs).
 
 ## Workaround
 Specify `inputs`.
