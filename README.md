@@ -7,6 +7,8 @@ First `pnpm install`
 
 So can see first run cache things. And on second run you would expect everything to be cached, but due to the outputted files also being seen as inputs it will re execute (and have it's dependents re-execute). Third run all cached (assuming you don't delete outputted files)
 
+[Can see these run summaries here](https://github.com/EWhite613/turbo-issue-cache/tree/main/runs).
+
 ## Workaround
 Specify `inputs`.
 
