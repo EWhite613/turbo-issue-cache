@@ -2,7 +2,6 @@
   "extends": ["//"],
   "pipeline": {
     "build": {
-      "inputs": ["src/**"],
       "outputs": ["*.js", "*.d.ts"]
     }
   }
