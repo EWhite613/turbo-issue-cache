@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "rootDir": "src",
+    "outDir": ".",
+    "types": ["jest", "node"],
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true
+  },
+  "include": ["src/*", "src/**/*"],
+  "exclude": ["node_modules", "dist"],
+}
